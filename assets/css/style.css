@@ -1,0 +1,125 @@
+/* ── RESET ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; color: #1a1a1a; background: #fff; }
+
+/* ── NAV ───────────────────────────────────────────────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid #e5e5e5;
+  padding: 0 2rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-size: 15px; font-weight: 500; }
+.nav-links { display: flex; gap: 2rem; font-size: 14px; color: #666; }
+.nav-links a { cursor: pointer; }
+.nav-links a:hover { color: #1a1a1a; }
+
+/* ── HERO ──────────────────────────────────────────────────────────────────── */
+.hero { padding: 100px 2rem 80px; max-width: 700px; margin: 0 auto; text-align: center; }
+.hero-tag {
+  display: inline-block; font-size: 12px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #666;
+  border: 0.5px solid #ddd; border-radius: 20px; padding: 4px 14px; margin-bottom: 28px;
+}
+.hero h1 { font-size: 42px; font-weight: 500; letter-spacing: -1px; line-height: 1.15; margin-bottom: 20px; }
+.hero p  { font-size: 17px; color: #555; line-height: 1.7; margin-bottom: 40px; }
+.hero-cta {
+  display: inline-block; background: #1a1a1a; color: #fff;
+  padding: 12px 28px; border-radius: 8px; font-size: 15px; cursor: pointer;
+}
+.hero-cta:hover { background: #333; }
+
+/* ── ABOUT ─────────────────────────────────────────────────────────────────── */
+.about { background: #f8f8f6; padding: 80px 2rem; }
+.about-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.section-label { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #999; margin-bottom: 16px; }
+.about h2  { font-size: 28px; font-weight: 500; letter-spacing: -0.5px; line-height: 1.3; margin-bottom: 16px; }
+.about > .about-inner > div > p { font-size: 15px; color: #555; line-height: 1.75; }
+.about-details { display: flex; flex-direction: column; gap: 20px; padding-top: 8px; }
+.detail-item h4 { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+.detail-item p  { font-size: 14px; color: #666; line-height: 1.6; }
+
+/* ── DEMO SECTION ──────────────────────────────────────────────────────────── */
+.demo-section { padding: 80px 2rem; max-width: 1200px; margin: 0 auto; }
+.demo-header  { margin-bottom: 28px; }
+.demo-header h2 { font-size: 28px; font-weight: 500; letter-spacing: -0.5px; margin-bottom: 8px; }
+.demo-header p  { font-size: 15px; color: #666; }
+
+/* ── CONTROLS ──────────────────────────────────────────────────────────────── */
+.controls-row  { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+.controls-left { display: flex; flex-direction: column; gap: 10px; }
+.file-selector-label { font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #999; margin-bottom: 4px; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip  { display: flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; border: 0.5px solid #ddd; font-size: 13px; cursor: pointer; transition: all 0.15s; user-select: none; background: #fff; color: #555; }
+.chip:hover  { border-color: #aaa; color: #1a1a1a; }
+.chip.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.chip .dot   { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* mode tabs */
+.mode-tabs { display: flex; gap: 8px; }
+.mode-tab  { padding: 7px 16px; border-radius: 20px; border: 0.5px solid #ddd; font-size: 13px; cursor: pointer; color: #555; background: #fff; transition: all 0.15s; user-select: none; }
+.mode-tab:hover  { border-color: #aaa; color: #1a1a1a; }
+.mode-tab.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+/* ── MAIN PANEL ────────────────────────────────────────────────────────────── */
+.main-panel {
+  display: grid; grid-template-columns: 320px 1fr;
+  border: 0.5px solid #e5e5e5; border-radius: 12px;
+  overflow: hidden; height: 600px;
+  transition: grid-template-columns 0.3s ease;
+}
+.main-panel.text-hidden { grid-template-columns: 0px 1fr; }
+
+/* text side */
+.text-side { display: flex; flex-direction: column; border-right: 0.5px solid #e5e5e5; overflow: hidden; background: #fff; min-width: 0; }
+.main-panel.text-hidden .text-side { border-right: none; }
+.text-side-header { padding: 12px 16px; border-bottom: 0.5px solid #e5e5e5; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+.text-side-label  { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #999; }
+.tab-row { display: flex; border-bottom: 0.5px solid #e5e5e5; overflow-x: auto; flex-shrink: 0; background: #fff; }
+.tab-btn { padding: 9px 14px; font-size: 12px; cursor: pointer; color: #888; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; }
+.tab-btn.active { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+.text-body { padding: 20px; font-size: 14px; line-height: 1.8; color: #444; overflow-y: auto; flex: 1; }
+.text-body h3 { font-size: 15px; font-weight: 500; margin-bottom: 10px; color: #1a1a1a; }
+.text-body p  { margin-bottom: 10px; }
+.text-placeholder { color: #ccc; font-size: 13px; text-align: center; margin-top: 60px; }
+
+/* graph side */
+.graph-side         { display: flex; flex-direction: column; background: #fafaf8; overflow: hidden; }
+.graph-side-header  { padding: 12px 16px; border-bottom: 0.5px solid #e5e5e5; display: flex; align-items: center; justify-content: space-between; background: #fff; flex-shrink: 0; }
+.graph-side-header-left { display: flex; align-items: center; gap: 10px; }
+.toggle-btn { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #666; background: none; border: 0.5px solid #ddd; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.toggle-btn:hover { border-color: #aaa; color: #1a1a1a; }
+.graph-count { font-size: 11px; color: #aaa; }
+.cross-note  { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #aaa; }
+.graph-viewport { flex: 1; overflow: hidden; position: relative; cursor: grab; }
+.graph-viewport:active { cursor: grabbing; }
+.graph-viewport svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.graph-empty { display: flex; align-items: center; justify-content: center; height: 100%; color: #ccc; font-size: 14px; }
+
+/* legend */
+.legend-row  { display: flex; flex-wrap: wrap; gap: 12px; padding: 8px 16px; border-top: 0.5px solid #e5e5e5; background: #fff; flex-shrink: 0; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #666; }
+.legend-dot  { width: 7px; height: 7px; border-radius: 50%; }
+
+/* zoom hint */
+.zoom-hint { position: absolute; bottom: 10px; right: 12px; font-size: 11px; color: #ccc; pointer-events: none; user-select: none; }
+
+/* ── HIGHLIGHTS ────────────────────────────────────────────────────────────── */
+.highlights       { background: #f8f8f6; padding: 80px 2rem; }
+.highlights-inner { max-width: 900px; margin: 0 auto; }
+.highlights h2    { font-size: 28px; font-weight: 500; letter-spacing: -0.5px; margin-bottom: 40px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card  { background: #fff; border: 0.5px solid #e5e5e5; border-radius: 12px; padding: 24px; }
+.card-num { font-size: 11px; color: #bbb; font-weight: 500; margin-bottom: 12px; }
+.card h4  { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+.card p   { font-size: 14px; color: #666; line-height: 1.65; }
+
+/* ── FOOTER ────────────────────────────────────────────────────────────────── */
+footer { border-top: 0.5px solid #e5e5e5; padding: 40px 2rem; display: flex; align-items: center; justify-content: space-between; }
+.footer-left, .footer-right { font-size: 14px; color: #999; }
+
+/* ── TOOLTIP ───────────────────────────────────────────────────────────────── */
+.tooltip { position: fixed; background: #1a1a1a; color: #fff; padding: 6px 10px; border-radius: 6px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.1s; z-index: 9999; white-space: nowrap; }
