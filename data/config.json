@@ -1,0 +1,26 @@
+{
+  "graph": {
+    "directed": false
+  },
+
+  "groups": [
+    {
+      "id": 1,
+      "name": "Primary",
+      "description": "Primary entities — physical systems, main actors",
+      "color": "#378ADD"
+    },
+    {
+      "id": 2,
+      "name": "Secondary",
+      "description": "Secondary entities — processes, substances",
+      "color": "#1D9E75"
+    },
+    {
+      "id": 3,
+      "name": "Outcomes",
+      "description": "Outcomes and effects — results, feedback",
+      "color": "#7F77DD"
+    }
+  ]
+}
