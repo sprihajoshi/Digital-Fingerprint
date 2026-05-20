@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    { "id": "corpus",  "label": "Corpus",      "group": 1 },
+    { "id": "token",   "label": "Tokens",      "group": 1 },
+    { "id": "attn",    "label": "Attention",   "group": 1 },
+    { "id": "layer",   "label": "Layers",      "group": 1 },
+    { "id": "train",   "label": "Training",    "group": 2 },
+    { "id": "obj",     "label": "Objective",   "group": 2 },
+    { "id": "scale",   "label": "Scale",       "group": 2 },
+    { "id": "energy",  "label": "Energy",      "group": 2 },
+    { "id": "emerge",  "label": "Emergence",   "group": 3 },
+    { "id": "reason",  "label": "Reasoning",   "group": 3 },
+    { "id": "feedback","label": "Feedback",    "group": 3 }
+  ],
+  "links": [
+    { "source": "corpus",  "target": "train",   "weight": 3 },
+    { "source": "corpus",  "target": "token",   "weight": 2 },
+    { "source": "train",   "target": "obj",     "weight": 3 },
+    { "source": "train",   "target": "scale",   "weight": 2 },
+    { "source": "train",   "target": "energy",  "weight": 2 },
+    { "source": "obj",     "target": "token",   "weight": 2 },
+    { "source": "token",   "target": "attn",    "weight": 3 },
+    { "source": "attn",    "target": "layer",   "weight": 3 },
+    { "source": "layer",   "target": "emerge",  "weight": 2 },
+    { "source": "scale",   "target": "emerge",  "weight": 3 },
+    { "source": "scale",   "target": "energy",  "weight": 2 },
+    { "source": "emerge",  "target": "reason",  "weight": 3 },
+    { "source": "emerge",  "target": "feedback","weight": 2 },
+    { "source": "feedback","target": "train",   "weight": 2 }
+  ]
+}
