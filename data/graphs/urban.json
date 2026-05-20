@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    { "id": "transit",  "label": "Transit",       "group": 1 },
+    { "id": "energy",   "label": "Energy",        "group": 1 },
+    { "id": "water",    "label": "Water",         "group": 1 },
+    { "id": "comms",    "label": "Communications","group": 1 },
+    { "id": "density",  "label": "Density",       "group": 2 },
+    { "id": "connect",  "label": "Connectivity",  "group": 2 },
+    { "id": "agg",      "label": "Agglomeration", "group": 2 },
+    { "id": "temp",     "label": "Temperature",   "group": 2 },
+    { "id": "resil",    "label": "Resilience",    "group": 3 },
+    { "id": "redund",   "label": "Redundancy",    "group": 3 },
+    { "id": "feedback", "label": "Feedback",      "group": 3 }
+  ],
+  "links": [
+    { "source": "transit",  "target": "connect",  "weight": 3 },
+    { "source": "transit",  "target": "energy",   "weight": 2 },
+    { "source": "energy",   "target": "water",    "weight": 2 },
+    { "source": "energy",   "target": "comms",    "weight": 2 },
+    { "source": "comms",    "target": "transit",  "weight": 2 },
+    { "source": "density",  "target": "agg",      "weight": 3 },
+    { "source": "density",  "target": "connect",  "weight": 2 },
+    { "source": "connect",  "target": "agg",      "weight": 2 },
+    { "source": "agg",      "target": "energy",   "weight": 2 },
+    { "source": "temp",     "target": "energy",   "weight": 2 },
+    { "source": "temp",     "target": "feedback", "weight": 2 },
+    { "source": "feedback", "target": "energy",   "weight": 3 },
+    { "source": "resil",    "target": "redund",   "weight": 3 },
+    { "source": "redund",   "target": "transit",  "weight": 2 },
+    { "source": "redund",   "target": "energy",   "weight": 2 },
+    { "source": "connect",  "target": "resil",    "weight": 2 }
+  ]
+}
