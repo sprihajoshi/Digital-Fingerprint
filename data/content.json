@@ -1,0 +1,66 @@
+{
+  "site": {
+    "title": "ResearchDemo",
+    "pageTitle": "Research Demo"
+  },
+
+  "hero": {
+    "tag": "Research Project",
+    "headline": "Visualise complex relationships in text",
+    "subheading": "An interactive demo exploring how network graphs can surface hidden structure in unstructured text. Select files, choose a view mode, and explore connections.",
+    "ctaLabel": "Explore the demo"
+  },
+
+  "about": {
+    "label": "About",
+    "heading": "From raw text to relational structure",
+    "body": "This project investigates methods for extracting meaningful entity relationships from natural language text and representing them as interactive network graphs — enabling faster, more intuitive analysis of large document sets.",
+    "details": [
+      {
+        "title": "Approach",
+        "body": "Named entity recognition paired with co-occurrence analysis to build weighted edge graphs from arbitrary text corpora."
+      },
+      {
+        "title": "Goal",
+        "body": "Enable researchers to visually compare relationship structures across multiple documents simultaneously."
+      },
+      {
+        "title": "Stage",
+        "body": "Prototype — demonstrating core interaction patterns with synthetic datasets."
+      }
+    ]
+  },
+
+  "demo": {
+    "label": "Interactive demo",
+    "heading": "Network graph explorer",
+    "subheading": "Select files and a mode. Scroll to zoom, drag canvas to pan, drag nodes to reposition."
+  },
+
+  "highlights": {
+    "label": "Highlights",
+    "heading": "Key findings",
+    "cards": [
+      {
+        "number": "01",
+        "title": "Structural divergence",
+        "body": "Documents from different domains produce visually distinct graph topologies, even at similar word counts."
+      },
+      {
+        "number": "02",
+        "title": "Hub entities",
+        "body": "A small number of entities act as hubs across multiple documents, revealing cross-document thematic links."
+      },
+      {
+        "number": "03",
+        "title": "Edge density as signal",
+        "body": "Higher edge density correlates with more tightly scoped, technical writing styles versus broad narrative text."
+      }
+    ]
+  },
+
+  "footer": {
+    "left": "Research Demo — Prototype v0.1",
+    "right": "Add datasets in the data/ folder"
+  }
+}
