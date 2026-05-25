@@ -6,31 +6,24 @@
 
 const datasets = [
   {
-    id:        "climate",
-    label:     "Climate Systems",
+    id:        "Hades_1",
+    label:     "Hades Report 1",
     color:     "#3B6D11",
-    textPath:  "data/texts/climate.html",
-    graphPath: "data/graphs/climate.json",
+    textPath:  "data/texts/Hades_1.html",
+    graphPath: "data/graphs/Hades_1.json",
   },
   {
-    id:        "urban",
-    label:     "Urban Networks",
+    id:        "Hades_2",
+    label:     "Hades Report 2",
     color:     "#185FA5",
-    textPath:  "data/texts/urban.html",
-    graphPath: "data/graphs/urban.json",
+    textPath:  "data/texts/Hades_2.html",
+    graphPath: "data/graphs/Hades_2.json",
   },
   {
-    id:        "language",
-    label:     "Language Models",
+    id:        "nepagent",
+    label:     "Nepagent Report",
     color:     "#534AB7",
-    textPath:  "data/texts/language.html",
-    graphPath: "data/graphs/language.json",
-  },
-  {
-    id:        "ecology",
-    label:     "Ecosystem Dynamics",
-    color:     "#993C1D",
-    textPath:  "data/texts/ecology.html",
-    graphPath: "data/graphs/ecology.json",
+    textPath:  "data/texts/nepagent.html",
+    graphPath: "data/graphs/nepagent.json",
   },
 ];
