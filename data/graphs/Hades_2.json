@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    { "id": "Person_Victim",              "label": "Person Victim",              "group": 1 },
+    { "id": "Person_JenniferBos",         "label": "Jennifer Bos",               "group": 1 },
+    { "id": "Person_WillemHoutman",       "label": "Willem Houtman",             "group": 1 },
+    { "id": "Person_YoungMan",            "label": "Young Man",                  "group": 1 },
+
+    { "id": "Victim_1",                   "label": "Victim",                     "group": 2 },
+    { "id": "Contacter_JenniferBos",      "label": "Contacter Jennifer Bos",     "group": 2 },
+    { "id": "Contacter_WillemHoutman",    "label": "Contacter Willem Houtman",   "group": 2 },
+    { "id": "Collector_YoungMan",         "label": "Collector Young Man",        "group": 2 },
+
+    { "id": "CriminalGroup_1",            "label": "Criminal Group",             "group": 3 },
+    { "id": "Organisation_HadesServices", "label": "Hades Services",             "group": 3 },
+
+    { "id": "BankAccountInfo_Victim",         "label": "Bank Account Victim",         "group": 4 },
+    { "id": "BankAccountInfo_HadesServices",  "label": "Bank Account Hades Services", "group": 4 },
+    { "id": "BankAccountInfo_FakeTracking",   "label": "Bank Account Fake Tracking",  "group": 4 },
+
+    { "id": "NL20INGB0001234567",         "label": "NL20INGB0001234567",         "group": 5 },
+    { "id": "INGB0001234567NL",           "label": "INGB0001234567NL",           "group": 5 },
+    { "id": "NL44RABO0123456789",         "label": "NL44RABO0123456789",         "group": 5 },
+
+    { "id": "Software_Anydesk",           "label": "Anydesk",                    "group": 6 },
+    { "id": "Mobile_iPhone",              "label": "iPhone",                     "group": 6 },
+
+    { "id": "Evidence_Bracelet",          "label": "Bracelet",                   "group": 7 },
+    { "id": "Evidence_Necklace",          "label": "Necklace",                   "group": 7 },
+
+    { "id": "CallingActivity_1",          "label": "Calling Activity",           "group": 8 },
+    { "id": "GainTrustActivity_1",        "label": "Gain Trust Activity",        "group": 8 },
+    { "id": "DownloadSoftwareActivity_1", "label": "Download Software Activity", "group": 8 },
+    { "id": "ShareAccessActivity_1",      "label": "Share Access Activity",      "group": 8 },
+    { "id": "BankTransferActivity_1",     "label": "Bank Transfer Activity 1",   "group": 8 },
+    { "id": "BankTransferActivity_2",     "label": "Bank Transfer Activity 2",   "group": 8 },
+    { "id": "VisitingActivity_1",         "label": "Visiting Activity",          "group": 8 },
+    { "id": "CollectingActivity_1",       "label": "Collecting Activity",        "group": 8 },
+
+    { "id": "InitialContact",             "label": "Initial Contact",            "group": 9 },
+    { "id": "GainDeviceAccessActivity",   "label": "Gain Device Access",         "group": 9 },
+    { "id": "CredentialAccessActivity",   "label": "Credential Access",          "group": 9 },
+    { "id": "Impact",                     "label": "Impact",                     "group": 9 },
+    { "id": "GainOTPActivity",            "label": "Gain OTP Activity",          "group": 9 },
+
+    { "id": "Jennifer",                   "label": "Jennifer",                   "group": 10 },
+    { "id": "Bos",                        "label": "Bos",                        "group": 10 },
+    { "id": "Willem",                     "label": "Willem",                     "group": 10 },
+    { "id": "Houtman",                    "label": "Houtman",                    "group": 10 },
+    { "id": "young_man_desc",             "label": "Young Man",                  "group": 10 },
+    { "id": "nick_JenniferBos",           "label": "Jennifer Bos",               "group": 10 },
+    { "id": "nick_WillemHoutman",         "label": "Willem Houtman",             "group": 10 },
+    { "id": "Apple",                      "label": "Apple",                      "group": 10 },
+    { "id": "iPhone_model",              "label": "iPhone",                     "group": 10 },
+    { "id": "val_1000",                   "label": "1000",                       "group": 10 },
+    { "id": "val_500",                    "label": "500",                        "group": 10 },
+    { "id": "auth_A1234",                 "label": "A1234",                      "group": 10 },
+    { "id": "auth_5DFG6",                 "label": "5DFG6",                      "group": 10 },
+    { "id": "amount_2000",               "label": "2000",                       "group": 10 },
+    { "id": "amount_500",                "label": "500",                        "group": 10 }
+  ],
+  "links": [
+    { "source": "Person_Victim",              "target": "Victim_1",                    "weight": 1, "label": "hasRole" },
+    { "source": "Person_JenniferBos",         "target": "Contacter_JenniferBos",       "weight": 1, "label": "hasRole" },
+    { "source": "Person_WillemHoutman",       "target": "Contacter_WillemHoutman",     "weight": 1, "label": "hasRole" },
+    { "source": "Person_YoungMan",            "target": "Collector_YoungMan",          "weight": 1, "label": "hasRole" },
+
+    { "source": "Person_JenniferBos",         "target": "Jennifer",                    "weight": 1, "label": "first_name" },
+    { "source": "Person_JenniferBos",         "target": "Bos",                         "weight": 1, "label": "last_name" },
+    { "source": "Person_WillemHoutman",       "target": "Willem",                      "weight": 1, "label": "first_name" },
+    { "source": "Person_WillemHoutman",       "target": "Houtman",                     "weight": 1, "label": "last_name" },
+    { "source": "Person_YoungMan",            "target": "young_man_desc",              "weight": 1, "label": "physical_appearance" },
+
+    { "source": "Contacter_JenniferBos",      "target": "nick_JenniferBos",            "weight": 1, "label": "nick_name" },
+    { "source": "Contacter_WillemHoutman",    "target": "nick_WillemHoutman",          "weight": 1, "label": "nick_name" },
+
+    { "source": "Contacter_JenniferBos",      "target": "CriminalGroup_1",             "weight": 1, "label": "RRisPartOf" },
+    { "source": "Contacter_WillemHoutman",    "target": "CriminalGroup_1",             "weight": 1, "label": "RRisPartOf" },
+    { "source": "Collector_YoungMan",         "target": "CriminalGroup_1",             "weight": 1, "label": "RRisPartOf" },
+
+    { "source": "Person_Victim",              "target": "BankAccountInfo_Victim",          "weight": 1, "label": "hasFeature" },
+    { "source": "Organisation_HadesServices", "target": "BankAccountInfo_HadesServices",   "weight": 1, "label": "hasFeature" },
+
+    { "source": "BankAccountInfo_Victim",         "target": "NL20INGB0001234567",        "weight": 1, "label": "IBAN" },
+    { "source": "BankAccountInfo_HadesServices",  "target": "INGB0001234567NL",          "weight": 1, "label": "IBAN" },
+    { "source": "BankAccountInfo_FakeTracking",   "target": "NL44RABO0123456789",        "weight": 1, "label": "IBAN" },
+
+    { "source": "Mobile_iPhone",              "target": "Apple",                       "weight": 1, "label": "ElectronicDevice_brand" },
+    { "source": "Mobile_iPhone",              "target": "iPhone_model",               "weight": 1, "label": "ElectronicDevice_model" },
+
+    { "source": "Evidence_Bracelet",          "target": "val_1000",                    "weight": 1, "label": "value" },
+    { "source": "Evidence_Necklace",          "target": "val_500",                     "weight": 1, "label": "value" },
+
+    { "source": "Person_JenniferBos",         "target": "Organisation_HadesServices",  "weight": 1, "label": "OOisPartOf" },
+    { "source": "Person_WillemHoutman",       "target": "Organisation_HadesServices",  "weight": 1, "label": "OOisPartOf" },
+    { "source": "Person_YoungMan",            "target": "Organisation_HadesServices",  "weight": 1, "label": "OOisPartOf" },
+
+    { "source": "CallingActivity_1",          "target": "Contacter_JenniferBos",       "weight": 1, "label": "hasAgent" },
+    { "source": "GainTrustActivity_1",        "target": "Contacter_JenniferBos",       "weight": 1, "label": "hasAgent" },
+    { "source": "GainTrustActivity_1",        "target": "Contacter_WillemHoutman",     "weight": 1, "label": "hasAgent" },
+    { "source": "DownloadSoftwareActivity_1", "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "ShareAccessActivity_1",      "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "BankTransferActivity_1",     "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "BankTransferActivity_2",     "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "VisitingActivity_1",         "target": "Collector_YoungMan",          "weight": 1, "label": "hasAgent" },
+    { "source": "CollectingActivity_1",       "target": "Collector_YoungMan",          "weight": 1, "label": "hasAgent" },
+
+    { "source": "CallingActivity_1",          "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "GainTrustActivity_1",        "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "DownloadSoftwareActivity_1", "target": "Software_Anydesk",            "weight": 1, "label": "hasParticipant" },
+    { "source": "BankTransferActivity_1",     "target": "BankAccountInfo_HadesServices","weight": 1, "label": "hasParticipant" },
+    { "source": "BankTransferActivity_2",     "target": "BankAccountInfo_FakeTracking", "weight": 1, "label": "hasParticipant" },
+    { "source": "VisitingActivity_1",         "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "CollectingActivity_1",       "target": "Evidence_Bracelet",           "weight": 1, "label": "hasParticipant" },
+    { "source": "CollectingActivity_1",       "target": "Evidence_Necklace",           "weight": 1, "label": "hasParticipant" },
+
+    { "source": "ShareAccessActivity_1",      "target": "auth_A1234",                  "weight": 1, "label": "authentication_code" },
+    { "source": "VisitingActivity_1",         "target": "auth_5DFG6",                  "weight": 1, "label": "authentication_code" },
+
+    { "source": "BankTransferActivity_1",     "target": "amount_2000",                 "weight": 1, "label": "amount" },
+    { "source": "BankTransferActivity_2",     "target": "amount_500",                  "weight": 1, "label": "amount" },
+
+    { "source": "CallingActivity_1",          "target": "InitialContact",              "weight": 1, "label": "PPisPartOf" },
+    { "source": "DownloadSoftwareActivity_1", "target": "GainDeviceAccessActivity",    "weight": 1, "label": "PPisPartOf" },
+    { "source": "ShareAccessActivity_1",      "target": "CredentialAccessActivity",    "weight": 1, "label": "PPisPartOf" },
+    { "source": "BankTransferActivity_1",     "target": "Impact",                      "weight": 1, "label": "PPisPartOf" },
+    { "source": "BankTransferActivity_2",     "target": "Impact",                      "weight": 1, "label": "PPisPartOf" },
+    { "source": "CollectingActivity_1",       "target": "VisitingActivity_1",          "weight": 1, "label": "PPisPartOf" },
+    { "source": "VisitingActivity_1",         "target": "GainOTPActivity",             "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "CallingActivity_1",          "target": "GainTrustActivity_1",         "weight": 2, "label": "precedes" },
+    { "source": "GainTrustActivity_1",        "target": "DownloadSoftwareActivity_1",  "weight": 2, "label": "precedes" },
+    { "source": "DownloadSoftwareActivity_1", "target": "ShareAccessActivity_1",       "weight": 2, "label": "precedes" },
+    { "source": "ShareAccessActivity_1",      "target": "BankTransferActivity_1",      "weight": 2, "label": "precedes" },
+    { "source": "BankTransferActivity_1",     "target": "BankTransferActivity_2",      "weight": 2, "label": "precedes" },
+    { "source": "BankTransferActivity_2",     "target": "VisitingActivity_1",          "weight": 2, "label": "precedes" },
+    { "source": "VisitingActivity_1",         "target": "CollectingActivity_1",        "weight": 2, "label": "precedes" }
+  ]
+}
