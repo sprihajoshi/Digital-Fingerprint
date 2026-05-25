@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    { "id": "Person_Victim",              "label": "Person Victim",              "group": 1 },
+    { "id": "Person_Houtman",             "label": "Person Houtman",             "group": 1 },
+    { "id": "Person_ManInSuit",           "label": "Man In Suit",                "group": 1 },
+    { "id": "Person_Daughter",            "label": "Daughter",                   "group": 1 },
+
+    { "id": "Victim_1",                   "label": "Victim",                     "group": 2 },
+    { "id": "Contacter_Houtman",          "label": "Contacter Houtman",          "group": 2 },
+    { "id": "Collector_ManInSuit",        "label": "Collector Man In Suit",      "group": 2 },
+    { "id": "Witness_Daughter",           "label": "Witness Daughter",           "group": 2 },
+
+    { "id": "CriminalGroup_1",            "label": "Criminal Group",             "group": 3 },
+
+    { "id": "BankAccountInfo_Victim",     "label": "Bank Account Victim",        "group": 4 },
+    { "id": "BankAccountCard_Victim",     "label": "Bank Account Card Victim",   "group": 4 },
+    { "id": "BankAccountInfo_Fraudulent", "label": "Bank Account Fraudulent",    "group": 4 },
+
+    { "id": "ContactInfo_Victim",         "label": "Contact Info Victim",        "group": 5 },
+    { "id": "ContactInfo_FraudDept",      "label": "Contact Info Fraud Dept",    "group": 5 },
+
+    { "id": "Software_Anydesk",           "label": "Anydesk",                    "group": 6 },
+    { "id": "Laptop_Victim",              "label": "Laptop Victim",              "group": 6 },
+    { "id": "Mobile_iPhone",              "label": "iPhone",                     "group": 6 },
+
+    { "id": "ATM_Veenendaal",             "label": "ATM Veenendaal",             "group": 7 },
+    { "id": "Organisation_AH",            "label": "AH Supermarket",             "group": 7 },
+    { "id": "ResidentialInfo_AH",         "label": "Residential Info AH",        "group": 7 },
+
+    { "id": "EmailActivity_1",            "label": "Email Activity",             "group": 8 },
+    { "id": "CallingActivity_1",          "label": "Calling Activity",           "group": 8 },
+    { "id": "GainTrustActivity_1",        "label": "Gain Trust Activity",        "group": 8 },
+    { "id": "DownloadSoftwareActivity_1", "label": "Download Software Activity", "group": 8 },
+    { "id": "ShareAccessActivity_1",      "label": "Share Access Activity",      "group": 8 },
+    { "id": "BankTransferActivity_1",     "label": "Bank Transfer Activity",     "group": 8 },
+    { "id": "GainOTPActivity_1",          "label": "Gain OTP Activity",          "group": 8 },
+    { "id": "VisitingActivity_1",         "label": "Visiting Activity",          "group": 8 },
+    { "id": "CollectingActivity_1",       "label": "Collecting Activity",        "group": 8 },
+    { "id": "WithdrawingMoneyActivity_1", "label": "Withdrawing Money Activity 1","group": 8 },
+    { "id": "WithdrawingMoneyActivity_2", "label": "Withdrawing Money Activity 2","group": 8 },
+
+    { "id": "InitialContact",             "label": "Initial Contact",            "group": 9 },
+    { "id": "GainDeviceAccessActivity",   "label": "Gain Device Access",         "group": 9 },
+    { "id": "CredentialAccessActivity",   "label": "Credential Access",          "group": 9 },
+    { "id": "Impact",                     "label": "Impact",                     "group": 9 },
+    { "id": "GainOTPActivity",            "label": "Gain OTP Activity (Phase)",  "group": 9 },
+
+    { "id": "val_Houtman",                "label": "Houtman",                    "group": 10 },
+    { "id": "val_man_in_suit",            "label": "Man In A Suit",              "group": 10 },
+    { "id": "val_nick_Houtman",           "label": "Mister Houtman",             "group": 10 },
+    { "id": "val_email_victim",           "label": "nanda@gmail.com",            "group": 10 },
+    { "id": "val_phone_fraud",            "label": "31612121212",                "group": 10 },
+    { "id": "val_IBAN_fraud",             "label": "NL44RABO0123456789",         "group": 10 },
+    { "id": "val_anydesk_name",           "label": "Anydesk",                    "group": 10 },
+    { "id": "val_laptop_type",            "label": "Laptop",                     "group": 10 },
+    { "id": "val_iphone_brand",           "label": "Apple",                      "group": 10 },
+    { "id": "val_iphone_model",           "label": "iPhone",                     "group": 10 },
+    { "id": "val_atm_type",               "label": "ATM",                        "group": 10 },
+    { "id": "val_atm_city",               "label": "Veenendaal",                 "group": 10 },
+    { "id": "val_ah_street",              "label": "Passage",                    "group": 10 },
+    { "id": "val_ah_plot",                "label": "50",                         "group": 10 },
+    { "id": "val_ah_postcode",            "label": "3901AZ",                     "group": 10 },
+    { "id": "val_ah_city",               "label": "Veenendaal",                 "group": 10 },
+    { "id": "val_ah_name",                "label": "AH Supermarket",             "group": 10 },
+    { "id": "val_auth_5DFG6",             "label": "5DFG6",                      "group": 10 },
+    { "id": "val_amount_2000",            "label": "2000",                       "group": 10 },
+    { "id": "val_amount_100",             "label": "100",                        "group": 10 },
+    { "id": "val_amount_500",             "label": "500",                        "group": 10 }
+  ],
+  "links": [
+    { "source": "Person_Victim",              "target": "Victim_1",                    "weight": 1, "label": "hasRole" },
+    { "source": "Person_Houtman",             "target": "Contacter_Houtman",           "weight": 1, "label": "hasRole" },
+    { "source": "Person_ManInSuit",           "target": "Collector_ManInSuit",         "weight": 1, "label": "hasRole" },
+    { "source": "Person_Daughter",            "target": "Witness_Daughter",            "weight": 1, "label": "hasRole" },
+
+    { "source": "Person_Houtman",             "target": "val_Houtman",                 "weight": 1, "label": "last_name" },
+    { "source": "Person_ManInSuit",           "target": "val_man_in_suit",             "weight": 1, "label": "physical_appearance_description" },
+
+    { "source": "Contacter_Houtman",          "target": "val_nick_Houtman",            "weight": 1, "label": "nick_name" },
+
+    { "source": "Contacter_Houtman",          "target": "CriminalGroup_1",             "weight": 1, "label": "RRisPartOf" },
+    { "source": "Collector_ManInSuit",        "target": "CriminalGroup_1",             "weight": 1, "label": "RRisPartOf" },
+
+    { "source": "Person_Victim",              "target": "val_email_victim",            "weight": 1, "label": "email_address" },
+    { "source": "Person_Victim",              "target": "ContactInfo_Victim",          "weight": 1, "label": "hasFeature" },
+    { "source": "ContactInfo_Victim",         "target": "val_email_victim",            "weight": 1, "label": "email_address" },
+
+    { "source": "Person_Victim",              "target": "BankAccountInfo_Victim",      "weight": 1, "label": "hasFeature" },
+    { "source": "Person_Victim",              "target": "BankAccountCard_Victim",      "weight": 1, "label": "hasFeature" },
+    { "source": "Person_Victim",              "target": "Laptop_Victim",               "weight": 1, "label": "hasFeature" },
+
+    { "source": "ContactInfo_FraudDept",      "target": "val_phone_fraud",             "weight": 1, "label": "phone_number" },
+    { "source": "CriminalGroup_1",            "target": "ContactInfo_FraudDept",       "weight": 1, "label": "hasFeature" },
+
+    { "source": "BankAccountInfo_Fraudulent", "target": "val_IBAN_fraud",              "weight": 1, "label": "IBAN" },
+
+    { "source": "Software_Anydesk",           "target": "val_anydesk_name",            "weight": 1, "label": "name" },
+
+    { "source": "Laptop_Victim",              "target": "val_laptop_type",             "weight": 1, "label": "type" },
+
+    { "source": "Mobile_iPhone",              "target": "val_iphone_brand",            "weight": 1, "label": "ElectronicDevice_brand" },
+    { "source": "Mobile_iPhone",              "target": "val_iphone_model",            "weight": 1, "label": "ElectronicDevice_model" },
+
+    { "source": "ATM_Veenendaal",             "target": "val_atm_type",                "weight": 1, "label": "type" },
+    { "source": "ATM_Veenendaal",             "target": "val_atm_city",                "weight": 1, "label": "city_name" },
+
+    { "source": "ResidentialInfo_AH",         "target": "val_ah_street",               "weight": 1, "label": "street_name" },
+    { "source": "ResidentialInfo_AH",         "target": "val_ah_plot",                 "weight": 1, "label": "plot_number" },
+    { "source": "ResidentialInfo_AH",         "target": "val_ah_postcode",             "weight": 1, "label": "postcode" },
+    { "source": "ResidentialInfo_AH",         "target": "val_ah_city",                "weight": 1, "label": "city_name" },
+
+    { "source": "Organisation_AH",            "target": "val_ah_name",                 "weight": 1, "label": "name" },
+    { "source": "Organisation_AH",            "target": "ResidentialInfo_AH",          "weight": 1, "label": "hasFeature" },
+
+    { "source": "EmailActivity_1",            "target": "CriminalGroup_1",             "weight": 1, "label": "hasAgent" },
+    { "source": "EmailActivity_1",            "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "EmailActivity_1",            "target": "InitialContact",              "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "CallingActivity_1",          "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "CallingActivity_1",          "target": "Person_Houtman",              "weight": 1, "label": "hasParticipant" },
+
+    { "source": "GainTrustActivity_1",        "target": "Contacter_Houtman",           "weight": 1, "label": "hasAgent" },
+    { "source": "GainTrustActivity_1",        "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+
+    { "source": "DownloadSoftwareActivity_1", "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "DownloadSoftwareActivity_1", "target": "Software_Anydesk",            "weight": 1, "label": "hasParticipant" },
+    { "source": "DownloadSoftwareActivity_1", "target": "Laptop_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "DownloadSoftwareActivity_1", "target": "GainDeviceAccessActivity",    "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "ShareAccessActivity_1",      "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "ShareAccessActivity_1",      "target": "Laptop_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "ShareAccessActivity_1",      "target": "CredentialAccessActivity",    "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "BankTransferActivity_1",     "target": "Victim_1",                    "weight": 1, "label": "hasAgent" },
+    { "source": "BankTransferActivity_1",     "target": "BankAccountInfo_Fraudulent",  "weight": 1, "label": "hasParticipant" },
+    { "source": "BankTransferActivity_1",     "target": "val_amount_2000",             "weight": 1, "label": "amount" },
+    { "source": "BankTransferActivity_1",     "target": "Impact",                      "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "GainOTPActivity_1",          "target": "Contacter_Houtman",           "weight": 1, "label": "hasAgent" },
+    { "source": "GainOTPActivity_1",          "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "GainOTPActivity_1",          "target": "BankAccountCard_Victim",      "weight": 1, "label": "hasParticipant" },
+    { "source": "GainOTPActivity_1",          "target": "CredentialAccessActivity",    "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "VisitingActivity_1",         "target": "Collector_ManInSuit",         "weight": 1, "label": "hasAgent" },
+    { "source": "VisitingActivity_1",         "target": "Person_Victim",               "weight": 1, "label": "hasParticipant" },
+    { "source": "VisitingActivity_1",         "target": "val_auth_5DFG6",              "weight": 1, "label": "authentication_code" },
+    { "source": "VisitingActivity_1",         "target": "GainOTPActivity",             "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "CollectingActivity_1",       "target": "Collector_ManInSuit",         "weight": 1, "label": "hasAgent" },
+    { "source": "CollectingActivity_1",       "target": "BankAccountCard_Victim",      "weight": 1, "label": "hasParticipant" },
+    { "source": "CollectingActivity_1",       "target": "VisitingActivity_1",          "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "WithdrawingMoneyActivity_1", "target": "CriminalGroup_1",             "weight": 1, "label": "hasAgent" },
+    { "source": "WithdrawingMoneyActivity_1", "target": "Organisation_AH",             "weight": 1, "label": "hasParticipant" },
+    { "source": "WithdrawingMoneyActivity_1", "target": "BankAccountCard_Victim",      "weight": 1, "label": "hasParticipant" },
+    { "source": "WithdrawingMoneyActivity_1", "target": "val_amount_100",              "weight": 1, "label": "amount" },
+    { "source": "WithdrawingMoneyActivity_1", "target": "Impact",                      "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "WithdrawingMoneyActivity_2", "target": "CriminalGroup_1",             "weight": 1, "label": "hasAgent" },
+    { "source": "WithdrawingMoneyActivity_2", "target": "ATM_Veenendaal",              "weight": 1, "label": "hasParticipant" },
+    { "source": "WithdrawingMoneyActivity_2", "target": "BankAccountCard_Victim",      "weight": 1, "label": "hasParticipant" },
+    { "source": "WithdrawingMoneyActivity_2", "target": "val_amount_500",              "weight": 1, "label": "amount" },
+    { "source": "WithdrawingMoneyActivity_2", "target": "Impact",                      "weight": 1, "label": "PPisPartOf" },
+
+    { "source": "EmailActivity_1",            "target": "CallingActivity_1",           "weight": 2, "label": "precedes" },
+    { "source": "CallingActivity_1",          "target": "GainTrustActivity_1",         "weight": 2, "label": "precedes" },
+    { "source": "GainTrustActivity_1",        "target": "DownloadSoftwareActivity_1",  "weight": 2, "label": "precedes" },
+    { "source": "DownloadSoftwareActivity_1", "target": "ShareAccessActivity_1",       "weight": 2, "label": "precedes" },
+    { "source": "ShareAccessActivity_1",      "target": "BankTransferActivity_1",      "weight": 2, "label": "precedes" },
+    { "source": "BankTransferActivity_1",     "target": "GainOTPActivity_1",           "weight": 2, "label": "precedes" },
+    { "source": "GainOTPActivity_1",          "target": "VisitingActivity_1",          "weight": 2, "label": "precedes" },
+    { "source": "VisitingActivity_1",         "target": "CollectingActivity_1",        "weight": 2, "label": "precedes" },
+    { "source": "CollectingActivity_1",       "target": "WithdrawingMoneyActivity_1",  "weight": 2, "label": "precedes" },
+    { "source": "WithdrawingMoneyActivity_1", "target": "WithdrawingMoneyActivity_2",  "weight": 2, "label": "precedes" }
+  ]
+}
